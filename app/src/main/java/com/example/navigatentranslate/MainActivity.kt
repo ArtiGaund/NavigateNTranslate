@@ -3,6 +3,7 @@ package com.example.navigatentranslate
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.PopupMenu
 import android.widget.Toast
@@ -10,10 +11,17 @@ import androidx.fragment.app.Fragment
 import androidx.appcompat.widget.Toolbar
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import java.lang.Exception
+import android.content.Intent
+import android.graphics.Bitmap
+import android.provider.MediaStore
+
 
 class MainActivity : AppCompatActivity() {
 
+    //defining bottomnavigation
     lateinit var bottomNav : BottomNavigationView
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,6 +33,8 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
 
         supportActionBar?.title = "NavigateNTranslate"
+
+
 
 
         // loading fragment components
@@ -56,6 +66,9 @@ class MainActivity : AppCompatActivity() {
                     false
                 }
             }
+
+
+
         }
     }
     private fun loadFragment(fragment: Fragment){
